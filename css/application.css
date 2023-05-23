@@ -1030,6 +1030,7 @@ button[disabled] {
 .hero-single-work-title {
   font-family: League Spartan, Helvetica, Arial, sans-serif;
   margin-bottom: 13px;
+  white-space: nowrap;
 }
 .hero-single-work-subtitle {
   font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman,
@@ -4107,7 +4108,7 @@ main {
 .single-work-text-content {
   float: left;
   clear: none;
-  width: 38.2%;
+  width: 75%;
   margin-left: 0;
   margin-right: 3%;
 }
