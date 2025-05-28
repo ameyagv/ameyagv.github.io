@@ -1,238 +1,286 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-    <head itemscope itemtype="http://schema.org/WebSite">
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Ameya Vaichalkar</title>
-        <meta name="description" content="Ameya Vaichalkar personal portfolio's website.">
-        <link type="text/plain" rel="author" href="humans.txt">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="msapplication-tap-highlight" content="no">
-        <style>
-            body {
-                background-color: #252a60 !important;
-            }
+  <head itemscope itemtype="http://schema.org/WebSite">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Ameya Vaichalkar</title>
+    <meta
+      name="description"
+      content="Ameya Vaichalkar personal portfolio's website."
+    />
+    <link type="text/plain" rel="author" href="humans.txt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <style>
+      body {
+        background-color: #252a60 !important;
+      }
 
-            body.loaded {
-                background-color: #f3f3f3 !important;
-            }
+      body.loaded {
+        background-color: #f3f3f3 !important;
+      }
 
-            #page-wrap {
-                opacity: 0;
-            }
+      #page-wrap {
+        opacity: 0;
+      }
 
-            .loaded #page-wrap {
-                opacity: 1;
-            }
+      .loaded #page-wrap {
+        opacity: 1;
+      }
 
-            @-webkit-keyframes "stripe" {
-                0% {
-                    left: 0;
-                    width: 0px;
-                }
+      @-webkit-keyframes stripe {
+        0% {
+          left: 0;
+          width: 0px;
+        }
 
-                25% {
-                    left: 0;
-                    width: 100%;
-                }
+        25% {
+          left: 0;
+          width: 100%;
+        }
 
-                50% {
-                    left: 100%;
-                    width: 0px;
-                }
+        50% {
+          left: 100%;
+          width: 0px;
+        }
 
-                75% {
-                    left: 0;
-                    width: 100%;
-                }
+        75% {
+          left: 0;
+          width: 100%;
+        }
 
-                100% {
-                    left: 0;
-                    width: 0px;
-                }
-            }
+        100% {
+          left: 0;
+          width: 0px;
+        }
+      }
 
-            @keyframes "stripe" {
-                0% {
-                    left: 0;
-                    width: 0px;
-                }
+      @keyframes stripe {
+        0% {
+          left: 0;
+          width: 0px;
+        }
 
-                25% {
-                    left: 0;
-                    width: 100%;
-                }
+        25% {
+          left: 0;
+          width: 100%;
+        }
 
-                50% {
-                    left: 100%;
-                    width: 0px;
-                }
+        50% {
+          left: 100%;
+          width: 0px;
+        }
 
-                75% {
-                    left: 0;
-                    width: 100%;
-                }
+        75% {
+          left: 0;
+          width: 100%;
+        }
 
-                100% {
-                    left: 0;
-                    width: 0px;
-                }
-            }
+        100% {
+          left: 0;
+          width: 0px;
+        }
+      }
 
-            #loader {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: #252a60;
-                opacity: 1;
-                visibility: visible;
-                transition: opacity 0.7s, visibility 0.7s, z-index 0.7s;
-                z-index: 61
-            }
+      #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #252a60;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.7s, visibility 0.7s, z-index 0.7s;
+        z-index: 61;
+      }
 
-            #loader.is-hidden {
-                opacity: 0;
-                visibility: hidden;
-                z-index: -1
-            }
+      #loader.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+      }
 
-            .no-js #loader {
-                display: none
-            }
+      .no-js #loader {
+        display: none;
+      }
 
-            .loader-content {
-                position: absolute;
-                -webkit-transform-style: preserve-3d;
-                transform-style: preserve-3d;
-                top: 50%;
-                left: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                width: 300px;
-                height: 90px;
-                overflow: hidden;
-                opacity: 1;
-                visibility: visible;
-                transition: all 0.25s ease;
-                z-index: 70
-            }
+      .loader-content {
+        position: absolute;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 90px;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.25s ease;
+        z-index: 70;
+      }
 
-            .loader-content.is-hidden {
-                opacity: 0;
-                visibility: hidden
-            }
+      .loader-content.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
 
-            .loader-content > * {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0
-            }
+      .loader-content > * {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
-            .stripe-loader {
-                width: 100%;
-                height: 90px
-            }
+      .stripe-loader {
+        width: 100%;
+        height: 90px;
+      }
 
-            .stripe {
-                height: 30px;
-                width: 0;
-                background: #ffffff;
-                position: relative;
-                margin: 0
-            }
+      .stripe {
+        height: 30px;
+        width: 0;
+        background: #ffffff;
+        position: relative;
+        margin: 0;
+      }
 
-            .stripe:first-child {
-                -webkit-animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) infinite;
-                animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) infinite
-            }
+      .stripe:first-child {
+        -webkit-animation: stripe 0.7s cubic-bezier(0.694, 0.048, 0.335, 1)
+          infinite;
+        animation: stripe 0.7s cubic-bezier(0.694, 0.048, 0.335, 1) infinite;
+      }
 
-            .stripe:nth-child(2) {
-                -webkit-animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) 0.1s infinite;
-                animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) 0.1s infinite
-            }
+      .stripe:nth-child(2) {
+        -webkit-animation: stripe 0.7s cubic-bezier(0.694, 0.048, 0.335, 1)
+          0.05s infinite;
+        animation: stripe 0.7s cubic-bezier(0.694, 0.048, 0.335, 1) 0.1s
+          infinite;
+      }
 
-            .stripe:nth-child(3) {
-                -webkit-animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) 0.2s infinite;
-                animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) 0.2s infinite
-            }
+      .stripe:nth-child(3) {
+        -webkit-animation: stripe 0.7s cubic-bezier(0.694, 0.048, 0.335, 1) 0.1s
+          infinite;
+        animation: stripe 0.7s cubic-bezier(0.694, 0.048, 0.335, 1) 0.1s
+          infinite;
+      }
 
-            #loader-after {
-                position: fixed;
-                top: 0;
-                left: -100%;
-                width: 100%;
-                height: 100%;
-                background-color: #1c1d25;
-                opacity: 1;
-                visibility: visible;
-                transition: opacity 0.7s, visibility 0.7s, z-index 0.7s;
-                z-index: 62
-            }
+      #loader-after {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #1c1d25;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.7s, visibility 0.7s, z-index 0.7s;
+        z-index: 62;
+      }
 
-            #loader-after.is-hidden {
-                opacity: 0;
-                visibility: hidden;
-                z-index: -1
-            }
-        </style>
-        <link rel="stylesheet" href="css/application.css">
-        <link rel="canonical" href="http://riccardozanutta.com/" itemprop="url">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="apple-mobile-web-app-title" content="Ameya Vaichalkar - Interactive Frontend Developer">
-        <meta name="google-site-verification" content="Vv6Ab5p4eW3hXGhlz5FEzlS7BAR-3yL3s6Hwt0XRTTs">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-        <link rel="manifest" href="/manifest.json">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#191a21">
-        <meta name="theme-color" content="#191a21">
-        <meta property="og:url" content="http://riccardozanutta.com/">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Ameya Vaichalkar - Interactive Frontend Developer">
-        <meta property="og:image" content="http://riccardozanutta.com/img/social-image.jpg">
-        <meta property="og:description" content="Ameya Vaichalkar personal portfolio's website.">
-        <meta property="og:site_name" content="Site Name">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Ameya Vaichalkar - Interactive Frontend Developer">
-        <meta name="twitter:description" content="Ameya Vaichalkar personal portfolio's website.">
-        <meta name="twitter:image" content="http://riccardozanutta.com/img/social-image.jpg">
-        <meta itemprop="name" content="Ameya Vaichalkar - Interactive Frontend Developer">
-        <meta itemprop="description" content="Ameya Vaichalkar personal portfolio's website.">
-        <meta itemprop="image" content="http://riccardozanutta.com/img/social-image.jpg">
-    </head>
-    <body itemscope itemtype="http://schema.org/WebPage">
-        <div id="loader">
-            <div class="loader-content">
-                <div class="stripe-loader">
-                    <div class="stripe"></div>
-                    <div class="stripe"></div>
-                    <div class="stripe"></div>
-                </div>
-            </div>
+      #loader-after.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+      }
+    </style>
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="canonical" href="http://riccardozanutta.com/" itemprop="url" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="Ameya Vaichalkar - Interactive Frontend Developer"
+    />
+    <meta
+      name="google-site-verification"
+      content="Vv6Ab5p4eW3hXGhlz5FEzlS7BAR-3yL3s6Hwt0XRTTs"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#191a21" />
+    <meta name="theme-color" content="#191a21" />
+    <meta property="og:url" content="http://riccardozanutta.com/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Ameya Vaichalkar - Interactive Frontend Developer"
+    />
+    <meta
+      property="og:image"
+      content="http://riccardozanutta.com/img/social-image.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Ameya Vaichalkar personal portfolio's website."
+    />
+    <meta property="og:site_name" content="Site Name" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Ameya Vaichalkar - Interactive Frontend Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Ameya Vaichalkar personal portfolio's website."
+    />
+    <meta
+      name="twitter:image"
+      content="http://riccardozanutta.com/img/social-image.jpg"
+    />
+    <meta
+      itemprop="name"
+      content="Ameya Vaichalkar - Interactive Frontend Developer"
+    />
+    <meta
+      itemprop="description"
+      content="Ameya Vaichalkar personal portfolio's website."
+    />
+    <meta
+      itemprop="image"
+      content="http://riccardozanutta.com/img/social-image.jpg"
+    />
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <div id="loader">
+      <div class="loader-content">
+        <div class="stripe-loader">
+          <div class="stripe"></div>
+          <div class="stripe"></div>
+          <div class="stripe"></div>
         </div>
-        <div id="loader-after"></div>
-        <div id="page-transition">
-            <div class="page-transition-content">
-                <div class="stripe-loader">
-                    <div class="stripe"></div>
-                    <div class="stripe"></div>
-                    <div class="stripe"></div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div id="loader-after"></div>
+    <div id="page-transition">
+      <div class="page-transition-content">
+        <div class="stripe-loader">
+          <div class="stripe"></div>
+          <div class="stripe"></div>
+          <div class="stripe"></div>
         </div>
-        <div id="page-transition-after"></div>
-        <div id="page-wrap">
-            <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="main-navigation">
-                
-                <div class="content nav-content">
-                    <a href="/" data-destination="home" itemprop="url" class="nav-logo">Home
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" id="my-svg" width="256" height="256" viewbox="0 0 256 256">
+      </div>
+    </div>
+    <div id="page-transition-after"></div>
+    <div id="page-wrap">
+      <nav
+        itemscope
+        itemtype="http://schema.org/SiteNavigationElement"
+        class="main-navigation"
+      >
+        <div class="content nav-content">
+          <a href="/" data-destination="home" itemprop="url" class="nav-logo"
+            >Home
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" id="my-svg" width="256" height="256" viewbox="0 0 256 256">
                             <path fill="#FFF" d="M53.2 145.1l81.9-71.7h-34.3L19 145.1l102.8 90h34.3l-102.9-90"></path>
                             <g fill="#FFF">
                                 <path d="M145.3 145.1l36-31.6s.8-.7 1.1-1l2.4-2.4c8.5-10.3 13.3-23.3 13.3-36.7 0-31.8-25.8-57.7-57.6-57.7l-111.1.1L7.2 38.6l111.4-.1h21.9c19.2 0 34.8 15.6 34.8 34.8 0 8.2-2.7 15.8-8 22.2-1 1.3-8.3 7.3-8.3 7.3l-12.4 10.6-35.6 31.7 102.9 90h34.3l-102.9-90zm33.4-31.7h.2-.2z"></path>
@@ -243,771 +291,1399 @@
                                 </g>
                             </g>
                         </svg> -->
-                        <br>
-                        <br>
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" id="my-svg" width="256" height="256" viewBox="0 0 256 256">
+            <br />
+            <br />
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" id="my-svg" width="256" height="256" viewBox="0 0 256 256">
                             
                             <g fill="#FFF">
                                 <path d="M 50 150 L 100 50 L 150 150 M 75 125 L 125 125" fill="none" stroke="#FFF" stroke-width="13"/>
                             </g>
                             </svg> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" id="my-svg" width="300" height="300" viewBox="0 0 300 300">
-                                <path d="M 75 225 L 150 75 L 225 225 M 112.5 187.5 L 187.5 187.5" fill="none" stroke="#FFF" stroke-width="12"/>
-                              </svg>
-                              
-                        <span itemprop="name" class="visual-hide">Home</span>
-                        <span aria-label="Ameya Vaichalkar's Logo">Ameya Vaichalkar's Logo</span>
-                    </a>
-                    <div aria-label="Mobile Menu" class="nav-toggle">
-                        <span class="menu-trigger">
-                            <i class="menu-trigger-bar top"></i>
-                            <i class="menu-trigger-bar middle"></i>
-                            <i class="menu-trigger-bar bottom"></i>
-                        </span>
-                    </div>
-                    <ul class="nav-links">
-                        <li itemprop="name">
-                            <a href="#case-studies" data-scroll itemprop="url" class="no-smoothState no-single-work">Work Experience</a>
-                        </li>
-                        <li itemprop="name">
-                            <a href="#projects" data-scroll itemprop="url" class="no-smoothState no-single-work">Projects</a>
-                        </li>
-                        <li itemprop="name">
-                            <a href="#experiments" data-scroll itemprop="url" class="no-smoothState no-single-work">Open Source</a>
-                        </li>
-                        <li class="in-single-work">
-                            <a href="/" data-destination="home" rel="nofollow">
-                                <span aria-label="Back" class="nav-link-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="476.2" height="476.2" viewbox="174 -174.2 476.2 476.2">
-                                        <path d="M244.6 134.5l21.2-21.2-34.4-34.4h418.8v-30H231.4l34.4-34.4-21.2-21.2L174 63.9"></path>
-                                    </svg>
-                                </span>
-                                Turn Back Home
-                            </a>
-                        </li>
-                        <li class="in-single-work">
-                            <a href="" id="all-works" rel="nofollow" class="no-smoothState">All Works</a>
-                        </li>
-                        <li>
-                            <a href="" class="no-smoothState open-contact">Contact</a>
-                        </li>
-                        <li class="no-single-work">
-                            <a href="#" id="change-theme" class="no-smoothState no-single-work">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 285.919 285.919">
-                                    <path d="M142.959 0C64.131 0 0 64.132 0 142.96s64.131 142.959 142.959 142.959 142.96-64.131 142.96-142.959S221.787 0 142.959 0zm0 260.919V25c65.043 0 117.96 52.917 117.96 117.96 0 65.043-52.917 117.959-117.96 117.959z"></path>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <nav class="mobile-menu">
-                <span aria-label="Close" class="close-trigger">
-                    <i class="close-trigger-bar left"></i>
-                    <i class="close-trigger-bar right"></i>
-                </span>
-                <ul class="mobile-nav-links">
-                    <li>
-                        <a href="/" data-destination="home">Home</a>
-                    </li>
-                    
-                    <li>
-                        <a href="#case-studies" data-scroll class="no-smoothState no-single-work">Experience</a>
-                    </li>
-                    <li>
-                        <a href="#projects" data-scroll class="no-smoothState no-single-work">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#experiments" data-scroll class="no-smoothState no-single-work">Open Source</a>
-                    </li>
-                    <li>
-                        <a href="" class="no-smoothState open-contact">Contact</a>
-                    </li>
-                </ul>
-                <ul class="nav-social-stripe">
-                    
-                    <li>
-                        <a href="https://www.linkedin.com/in/ameya-vaichalkar/" target="_blank" rel="noopener" aria-label="Linkedin">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="430.117" height="430.117" viewbox="0 0 430.117 430.117">
-                                <path d="M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z"></path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/ameyagv" target="_blank" rel="noopener" aria-label="Github">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="438.549" height="438.549" viewbox="0 0 438.549 438.549">
-                                <path d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z"></path>
-                            </svg>
-                        </a>
-                    </li>
-                    
-                </ul>
-            </nav>
-            <header id="top" class="main-hero">
-                <div id="awwwards" class="sotd green right">
-                    <a href="http://www.awwwards.com/sites/riccardo-zanutta-interactive-frontend-developer" target="_blank">Awwwards</a>
-                </div>
-                <div class="main-hero-text">
-                    <div class="content">
-                        <div class="text-loading-mask">
-                            <div class="text-loading-overlay"></div>
-                            <h1 itemprop="author" class="main-hero-title">Ameya Vaichalkar</h1>
-                        </div>
-                        <div>
-                            <div class="text-loading-mask">
-                                <div style="transition-delay: 0.1s;" class="text-loading-overlay"></div>
-                                <h3 itemprop="specialty" class="main-hero-subtitle h5">Eager Student Enthusiastic about Full Stack Development, Cloud, DevOps, and Backend Web Development: Seeking Software Engineering Internship </h3>
-                            </div>
-                        </div>
-                        <div>
-                            <div style="width: 175px;" class="text-loading-mask">
-                                <div style="transition-delay: 0.15s;" class="text-loading-overlay"></div>
-                                <a href="#" class="the-button call-to-button no-smoothstate open-contact">
-                                    <span class="button-text">About Me</span>
-                                    <div class="button-mask"></div>
-                                    <span class="button-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                            <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="shapes-mask">
-                    <!-- triangle-->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="37.196" height="32.213" viewbox="0 0 37.196 32.213">
-                        <symbol id="triangle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25.675" height="22.236" viewbox="0 0 25.675 22.236">
-                                <path fill="none" stroke="#CF4981" stroke-width="3" stroke-miterlimit="10" d="M12.837 3l5.12 8.868 5.12 8.868H2.597l5.12-8.868z"></path>
-                            </svg>
-                        </symbol>
-                    </svg>
-                    <!-- semi circle-->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="29.093" height="14.546" viewbox="0 0 29.093 14.546">
-                        <symbol id="semiCircle">
-                            <path fill="none" stroke="#CF4981" stroke-width="3" stroke-miterlimit="10" d="M1.5 14.546C1.5 7.34 7.34 1.5 14.547 1.5c7.205 0 13.046 5.84 13.046 13.046"></path>
-                        </symbol>
-                    </svg>
-                    <!-- spring-->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17.046" height="36.016" viewbox="0 0 17.046 36.016">
-                        <symbol id="spring">
-                            <path fill="none" stroke="#CF4981" stroke-width="3" stroke-miterlimit="10" d="M9.945 34.614S1.46 31.38 1.5 23.92s11.73-4.797 11.73-4.797S3.82 16.708 4.18 8.77s12.784-7.255 12.784-7.255"></path>
-                        </symbol>
-                    </svg>
-                    <!-- line-->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25.675" height="22.236" viewbox="0 0 25.675 22.236">
-                        <symbol id="line">
-                            <path fill="none" stroke="#CF4981" stroke-width="3" stroke-miterlimit="10" d="M4.92 2.514L21.964 19.56"></path>
-                        </symbol>
-                    </svg>
-                    <svg width="25px" height="25px" class="layer1 p1">
-                        <use xlink:href="#triangle" class="yellow"></use>
-                    </svg>
-                    <svg width="28px" height="28px" class="layer1 p2">
-                        <use xlink:href="#semiCircle" class="yellow"></use>
-                    </svg>
-                    <svg width="25px" height="25px" class="layer2 p3">
-                        <use width="25px" height="25px" xlink:href="#triangle" class="aqua"></use>
-                    </svg>
-                    <svg class="layer1 p4">
-                        <use xlink:href="#triangle" class="pink"></use>
-                    </svg>
-                    <svg width="28px" height="28px" class="layer1 p5">
-                        <use xlink:href="#semiCircle" class="aqua"></use>
-                    </svg>
-                    <svg width="36px" height="36px" class="layer2 p6">
-                        <use xlink:href="#spring" class="pink"></use>
-                    </svg>
-                    <svg width="36px" height="36px" class="layer2 p7">
-                        <use xlink:href="#spring" class="pink"></use>
-                    </svg>
-                    <svg width="22px" height="22px" class="layer2 p8">
-                        <use xlink:href="#line" class="aqua"></use>
-                    </svg>
-                    <svg width="22px" height="22px" class="layer1 p9">
-                        <use xlink:href="#line" class="aqua"></use>
-                    </svg>
-                    <svg width="22px" height="22px" class="layer2 p10">
-                        <use xlink:href="#line" class="yellow"></use>
-                    </svg>
-                    <svg width="28px" height="28px" class="layer1 p11">
-                        <use xlink:href="#semiCircle" class="aqua"></use>
-                    </svg>
-                </div>
-                <div itemscope="primaryImageOfPage" class="logo-mask">
-                </div>
-                <ul itemscope itemtype="http://schema.org/Organization" class="social-vertical-stripe">
-                    <span itemprop="name" class="visual-hide">Ameya Vaichalkar</span>
-                    <link itemprop="url" href="http://riccardozanutta.com/">
-                    <link itemprop="logo" href="http://riccardozanutta.com/icons/logo.svg">
-                    <li>
-                        <a href="https://www.linkedin.com/in/ameya-vaichalkar/" target="_blank" rel="noopener" itemprop="sameAs">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="430.117" height="430.117" viewbox="0 0 430.117 430.117">
-                                <path d="M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z"></path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/ameyagv" target="_blank" rel="noopener" itemprop="sameAs">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="438.549" height="438.549" viewbox="0 0 438.549 438.549">
-                                <path d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z"></path>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-                <a href="#case-studies" data-scroll class="hero-go-next no-smoothstate">
-                    <div class="go-next-label">Work Experience</div>
-                    <span class="the-arrow arrow-down"></span>
-                </a>
-            </header>
-            <main>
-                <div class="some-shapes">
-                    <div data-rellax-speed="-1" class="circle1 rellax">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewbox="0 0 70 70">
-                            <circle fill="none" stroke="#6107EF" stroke-width="9" stroke-miterlimit="10" cx="35" cy="35.1" r="28.5"></circle>
-                        </svg>
-                    </div>
-                    <div data-rellax-speed="1" class="square1 rellax">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100">
-                            <path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path>
-                        </svg>
-                    </div>
-                    <div data-rellax-speed="1" class="triangle1 rellax">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewbox="0 0 70 70">
-                            <path fill="none" stroke="#0FE851" stroke-width="8" stroke-miterlimit="10" d="M12.6 56l22.8-39.5L58.2 56z"></path>
-                        </svg>
-                    </div>
-                    <div data-rellax-speed="-1" class="cross1 rellax">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewbox="26 -26 180 180">
-                            <path fill="#ffda77" d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"></path>
-                            <path fill="#ffda77" d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"></path>
-                        </svg>
-                    </div>
-                    <div data-rellax-speed="-1.3" class="circle2 rellax">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewbox="0 0 70 70">
-                            <circle fill="none" stroke="#6107EF" stroke-width="9" stroke-miterlimit="10" cx="35" cy="35.1" r="28.5"></circle>
-                        </svg>
-                    </div>
-                    <div data-rellax-speed="-1" class="square2 rellax">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100">
-                            <path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path>
-                        </svg>
-                    </div>
-                    <div data-rellax-speed="1" class="triangle2 rellax">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewbox="0 0 70 70">
-                            <path fill="none" stroke="#0FE851" stroke-width="8" stroke-miterlimit="10" d="M12.6 56l22.8-39.5L58.2 56z"></path>
-                        </svg>
-                    </div>
-                    <div data-rellax-speed="1" class="cross2 rellax">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewbox="26 -26 180 180">
-                            <path fill="#ffda77" d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"></path>
-                            <path fill="#ffda77" d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"></path>
-                        </svg>
-                    </div>
-                    <div data-rellax-speed="-1" class="square3 rellax">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100">
-                            <path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path>
-                        </svg>
-                    </div>
-                    <div data-rellax-speed="1.3" class="circle3 rellax">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewbox="0 0 70 70">
-                            <circle fill="none" stroke="#6107EF" stroke-width="9" stroke-miterlimit="10" cx="35" cy="35.1" r="28.5"></circle>
-                        </svg>
-                    </div>
-                    <div data-rellax-speed="-1" class="cross3 rellax">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewbox="26 -26 180 180">
-                            <path fill="#ffda77" d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"></path>
-                            <path fill="#ffda77" d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"></path>
-                        </svg>
-                    </div>
-                </div>
-                <section id="case-studies" itemscope="" itemprop="mainContentOfPage" class="case-studies-section">
-                    <div class="section-mask"></div>
-                    <div class="content">
-                        <div class="section-text-mask">
-                            <!-- <h4 class="h5 section-subtitle">Case Studies</h4> -->
-                        </div>
-                        <div class="section-text-mask">
-                            <h2 class="h3 section-title">Professional Background</h2>
-                        </div>
-                        <ul class="case-studies-list">
-                            <li itemscope itemtype="http://schema.org/CreativeWork">
-                                <a href="/epam.html" id="cerasa" style="background-image: url('img/cerasa-work.jpg');" data-destination="cerasa" itemprop="url" class="case-study">
-                                    <div class="case-study-mask"></div>
-                                    <div class="case-study-reveal-mask"></div>
-                                    <div class="case-study-mask-number">
-                                        <div class="case-study-mask-back">01</div>
-                                        <div class="case-study-mask-front">
-                                            <div data-index="01" class="case-study-mask-overlay">01</div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-text-section">
-                                        <h3 itemprop="name" class="h2 case-study-title">EPAM Systems</h3>
-                                        <h5 itemprop="description" class="case-study-subtitle">Junior Software Engineer</h5>
-                                        <button class="the-button call-to-button">
-                                            <span class="button-text">Read More</span>
-                                            <div class="button-mask"></div>
-                                            <span class="button-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                                    <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </li>
-                            <li itemscope itemtype="http://schema.org/CreativeWork">
-                                <a href="/vois.html" id="lato" style="background-image: url('img/lato-admin.png');" data-destination="lato" itemprop="url" class="case-study">
-                                    <div class="case-study-mask"></div>
-                                    <div class="case-study-reveal-mask"></div>
-                                    <div class="case-study-mask-number">
-                                        <div class="case-study-mask-back">02</div>
-                                        <div class="case-study-mask-front">
-                                            <div data-index="02" class="case-study-mask-overlay">02</div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-text-section">
-                                        <h3 itemprop="name" class="h2 case-study-title">Vodafone Intelligent Solutions</h3>
-                                        <h5 itemprop="description" class="case-study-subtitle">Graduate Engneer Trainee</h5>
-                                        <button class="the-button call-to-button">
-                                            <span class="button-text">Read More</span>
-                                            <div class="button-mask"></div>
-                                            <span class="button-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                                    <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-               
-                <section id="projects" itemscope="" itemprop="mainContentOfPage" class="case-studies-section">
-                    <div class="section-mask"></div>
-                    <div class="content">
-                        <div class="section-text-mask">
-                            <h4 class="h5 section-subtitle">Projects</h4>
-                        </div>
-                        <div class="section-text-mask">
-                            <h2 class="h3 section-title">Latest Projects</h2>
-                        </div>
-                        <ul class="case-studies-list">
-                            <li itemscope itemtype="http://schema.org/CreativeWork">
-                                <a href="/terrain.html" id="cerasa" style="background-image: url('img/cerasa-work.jpg');" data-destination="cerasa" itemprop="url" class="case-study">
-                                    <div class="case-study-mask"></div>
-                                    <div class="case-study-reveal-mask"></div>
-                                    <div class="case-study-mask-number">
-                                        <div class="case-study-mask-back">01</div>
-                                        <div class="case-study-mask-front">
-                                            <div data-index="01" class="case-study-mask-overlay">01</div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-text-section">
-                                        <h3 itemprop="name" class="h2 case-study-title">Terrain Identification</h3>
-                                        <h5 itemprop="description" class="case-study-subtitle">Time Series Data, Machine Learning, LSTM, BiLSTM</h5>
-                                        <button class="the-button call-to-button">
-                                            <span class="button-text">Read More</span>
-                                            <div class="button-mask"></div>
-                                            <span class="button-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                                    <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </li>
-                            <li itemscope itemtype="http://schema.org/CreativeWork">
-                                <a href="/foodfight.html" id="lato" style="background-image: url('img/lato-admin.png');" data-destination="lato" itemprop="url" class="case-study">
-                                    <div class="case-study-mask"></div>
-                                    <div class="case-study-reveal-mask"></div>
-                                    <div class="case-study-mask-number">
-                                        <div class="case-study-mask-back">02</div>
-                                        <div class="case-study-mask-front">
-                                            <div data-index="02" class="case-study-mask-overlay">02</div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-text-section">
-                                        <h3 itemprop="name" class="h2 case-study-title">The Great Food Fight: CNN Vs TRANSFORMERS</h3>
-                                        <h5 itemprop="description" class="case-study-subtitle">Machine Learning, Computer Vision, CNN, Transformers</h5>
-                                        <button class="the-button call-to-button">
-                                            <span class="button-text">Read More</span>
-                                            <div class="button-mask"></div>
-                                            <span class="button-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                                    <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </li>
-                            <li itemscope itemtype="http://schema.org/CreativeWork">
-                                <a href="/dbms.html" id="la-francesca" style="background-image: url('img/la-francesca-work.jpg');" data-destination="la-francesca" itemprop="url" class="case-study">
-                                    <div class="case-study-mask"></div>
-                                    <div class="case-study-reveal-mask"></div>
-                                    <div class="case-study-mask-number">
-                                        <div class="case-study-mask-back">03</div>
-                                        <div class="case-study-mask-front">
-                                            <div data-index="03" class="case-study-mask-overlay">03</div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-text-section">
-                                        <h3 itemprop="name" class="h2 case-study-title">WolfMedia</h3>
-                                        <h5 itemprop="description" class="case-study-subtitle">Database Management System for a Digital music and podcast streaming service. Built using Java, SpringBoot, JDBC, MariaDB, MySQL, REST</h5>
-                                        <button class="the-button call-to-button">
-                                            <span class="button-text">Read More</span>
-                                            <div class="button-mask"></div>
-                                            <span class="button-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                                    <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </li>
-                            <li itemscope itemtype="http://schema.org/CreativeWork">
-                                <a href="/bookshopping.html" id="sportland" style="background-image: url('img/sportland-work.jpg');" data-destination="sportland" itemprop="url" class="case-study">
-                                    <div class="case-study-mask"></div>
-                                    <div class="case-study-reveal-mask"></div>
-                                    <div class="case-study-mask-number">
-                                        <div class="case-study-mask-back">04</div>
-                                        <div class="case-study-mask-front">
-                                            <div data-index="04" class="case-study-mask-overlay">04</div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-text-section">
-                                        <h3 itemprop="name" class="h2 case-study-title">Book Shopping Application</h3>
-                                        <h5 itemprop="description" class="case-study-subtitle">Comprehensive platform that enables users to browse, purchase, and review books, add to cart, all while ensuring data integrity, handling concurrency in shopping and user privacy.
-                                            <br>Built using Ruby on Rails, HTML5, Docker.
-                                        </h5>
-                                        <button class="the-button call-to-button">
-                                            <span class="button-text">Read More</span>
-                                            <div class="button-mask"></div>
-                                            <span class="button-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                                    <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </li>
-                            <li itemscope itemtype="http://schema.org/CreativeWork">
-                                <a href="/sportland" id="sportland" style="background-image: url('img/sportland-work.jpg');" data-destination="sportland" itemprop="url" class="case-study">
-                                    <div class="case-study-mask"></div>
-                                    <div class="case-study-reveal-mask"></div>
-                                    <div class="case-study-mask-number">
-                                        <div class="case-study-mask-back">05</div>
-                                        <div class="case-study-mask-front">
-                                            <div data-index="05" class="case-study-mask-overlay">05</div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-text-section">
-                                        <h3 itemprop="name" class="h2 case-study-title">Image Style Transfer</h3>
-                                        <h5 itemprop="description" class="case-study-subtitle">Evaluated three powerful models (CycleGANs, ResNet50, and VGG-19) for Image Style Transfer on the vangogh2photo dataset, enabling the transformation of content images into stunning stylized artworks.
-                                            Used Tensorflow, Keras, Pix2Pix.
-                                        </h5>
-                                        <button class="the-button call-to-button">
-                                            <span class="button-text">Read More</span>
-                                            <div class="button-mask"></div>
-                                            <span class="button-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                                    <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </li>
-                            <li itemscope itemtype="http://schema.org/CreativeWork">
-                                <a href="/sportland" id="sportland" style="background-image: url('img/sportland-work.jpg');" data-destination="sportland" itemprop="url" class="case-study">
-                                    <div class="case-study-mask"></div>
-                                    <div class="case-study-reveal-mask"></div>
-                                    <div class="case-study-mask-number">
-                                        <div class="case-study-mask-back">06</div>
-                                        <div class="case-study-mask-front">
-                                            <div data-index="06" class="case-study-mask-overlay">06</div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-text-section">
-                                        <h3 itemprop="name" class="h2 case-study-title">WolfLease</h3>
-                                        <h5 itemprop="description" class="case-study-subtitle">An application to help people find Apartments offering rooms on sublease and move in faster! Built using Python, Django, HTML5, CSS and JavaScript</h5>
-                                        <button class="the-button call-to-button">
-                                            <span class="button-text">Read More</span>
-                                            <div class="button-mask"></div>
-                                            <span class="button-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                                    <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </li>
-                            <li itemscope itemtype="http://schema.org/CreativeWork">
-                                <a href="/sportland" id="sportland" style="background-image: url('img/sportland-work.jpg');" data-destination="sportland" itemprop="url" class="case-study">
-                                    <div class="case-study-mask"></div>
-                                    <div class="case-study-reveal-mask"></div>
-                                    <div class="case-study-mask-number">
-                                        <div class="case-study-mask-back">07</div>
-                                        <div class="case-study-mask-front">
-                                            <div data-index="07" class="case-study-mask-overlay">07</div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-text-section">
-                                        <h3 itemprop="name" class="h2 case-study-title">Library Management System</h3>
-                                        <h5 itemprop="description" class="case-study-subtitle">Microservice architecture to simulate library functions with better scalability. Used Java, Spring MVC, Spring REST, Spring Boot, Spring Data JPA, Feign client, Eureka Naming Service.</h5>
-                                        <button class="the-button call-to-button">
-                                            <span class="button-text">Read More</span>
-                                            <div class="button-mask"></div>
-                                            <span class="button-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                                    <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </li>
-                            <li itemscope itemtype="http://schema.org/CreativeWork">
-                                <a href="/sportland" id="sportland" style="background-image: url('img/sportland-work.jpg');" data-destination="sportland" itemprop="url" class="case-study">
-                                    <div class="case-study-mask"></div>
-                                    <div class="case-study-reveal-mask"></div>
-                                    <div class="case-study-mask-number">
-                                        <div class="case-study-mask-back">08</div>
-                                        <div class="case-study-mask-front">
-                                            <div data-index="08" class="case-study-mask-overlay">08</div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-text-section">
-                                        <h3 itemprop="name" class="h2 case-study-title">Password Management tool </h3>
-                                        <h5 itemprop="description" class="case-study-subtitle">A secure Password Management Tool (PMT) wherein users can store username, password credentials, group them based on a criteria. Used Java, REST service and MVC client, Spring Boot, RestTemplate, JSP</h5>
-                                        <button class="the-button call-to-button">
-                                            <span class="button-text">Read More</span>
-                                            <div class="button-mask"></div>
-                                            <span class="button-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                                    <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </li>
-                            <li itemscope itemtype="http://schema.org/CreativeWork">
-                                <a href="/sportland" id="sportland" style="background-image: url('img/sportland-work.jpg');" data-destination="sportland" itemprop="url" class="case-study">
-                                    <div class="case-study-mask"></div>
-                                    <div class="case-study-reveal-mask"></div>
-                                    <div class="case-study-mask-number">
-                                        <div class="case-study-mask-back">09</div>
-                                        <div class="case-study-mask-front">
-                                            <div data-index="09" class="case-study-mask-overlay">09</div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-text-section">
-                                        <h3 itemprop="name" class="h2 case-study-title">Camera LiDAR Object Detection</h3>
-                                        <h5 itemprop="description" class="case-study-subtitle">Data fusion technique, combining Camera and LiDAR data 
-                                            through multivariate polynomial regression, resulting in efficient detection, classification, 
-                                            and distance estimation of vehicles, with the added optimization of converting LiDAR's 3D point 
-                                            data to 2D images for faster object detection. Used Python, Computer Vision, Machine Learning, OpenCV, YOLO</h5>
-                                        <button class="the-button call-to-button">
-                                            <span class="button-text">Read More</span>
-                                            <div class="button-mask"></div>
-                                            <span class="button-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
-                                                    <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="my-svg"
+              width="300"
+              height="300"
+              viewBox="0 0 300 300"
+            >
+              <path
+                d="M 75 225 L 150 75 L 225 225 M 112.5 187.5 L 187.5 187.5"
+                fill="none"
+                stroke="#FFF"
+                stroke-width="12"
+              />
+            </svg>
 
-                <section class="section mobile-only">
-                    <div class="section-mask"></div>
-                    <div class="content">
-                        <div class="button-content text-center">
-                            <button class="the-button button-big open-contact">Contact me</button>
-                        </div>
-                    </div>
-                </section>
-                <section id="experiments" class="experiments-section">
-                    <div class="section-mask"></div>
-                    <div class="inner-container">
-                        <div class="section-text-mask">
-                            <h3 class="h5 section-subtitle">Open Source</h3>
-                        </div>
-                        <div class="section-text-mask">
-                            <!-- <h2 class="h3 section-title">Web is fun.</h2> -->
-                        </div>
-                    </div>
-                    <div class="inner-container hidden">
-                        <div class="experiments-mask-reveal">
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="inner-container">
-                            <a href="https://github.com/expertiza/expertiza/pull/2548" target="_blank" rel="noopener" class="experiment">
-                                <div class="experiment-mask"></div>
-                                <div class="experiment-number-mask">
-                                    <span>01</span>
-                                </div>
-                                <div class="experiment-circle">
-                                    <div class="experiment-image"></div>
-                                </div>
-                                <div class="experiment-title-area">
-                                    <div class="experiment-title-label">Refactoring</div>
-                                    <div class="experiment-title">Refactoring Course and CourseTeam models</div>
-                                </div>
-                                <div class="experiment-number-area">&nbsp;</div>
-                            </a>
-                            <a href="https://github.com/ameyagv/reimplementation-back-end/tree/course-dev" target="_blank" rel="noopener" class="experiment">
-                                <div class="experiment-mask"></div>
-                                <div class="experiment-number-mask">
-                                    <span>02</span>
-                                </div>
-                                <div class="experiment-circle">
-                                    <div class="experiment-image"></div>
-                                </div>
-                                <div class="experiment-title-area">
-                                    <div class="experiment-title-label">Reimplementation</div>
-                                    <div class="experiment-title">Reimplementing Courses Functionality</div>
-                                </div>
-                                <div class="experiment-number-area">&nbsp;</div>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-                <div class="about-contact">
-                    <div id="contact-half" class="half-contact is-contact">
-                        <div class="form-loader">
-                            <div class="form-loader-content">
-                                <div class="stripe-loader">
-                                    <div class="stripe"></div>
-                                    <div class="stripe"></div>
-                                    <div class="stripe"></div>
-                                </div>
-                            </div>
-                            <div class="form-message-content">
-                                <div class="form-message">Default Message</div>
-                            </div>
-                        </div>
-                        <div class="form-loader-before"></div>
-                        <div class="giga-text">Contact</div>
-                        <div class="contact-info">
-                            <h3 class="h4 form-title">Let’s talk.</h3>
-                            <!-- <p class="form-subtitle">New projects, freelance inquiry or even a coffee.</p> -->
-                            <div class="inner-container">
-                                <form id="contact-form" method="post" action="mailer.php" class="the-form no-smoothState">
-                                    <div class="input required">
-                                        <input type="text" id="name" name="name">
-                                        <label class="label">Name</label>
-                                    </div>
-                                    <div class="input required email">
-                                        <input type="text" id="email" name="email">
-                                        <label class="label">E-mail</label>
-                                    </div>
-                                    <div class="input required">
-                                        <textarea id="message" name="message"></textarea>
-                                        <label class="label">Message</label>
-                                    </div>
-                                    <div class="inner-container">
-                                        <button type="submit" disabled class="the-button submit-button">
-                                            <span class="button-text">Send Message</span>
-                                            <div class="button-mask"></div>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="close-contact">
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="half-contact is-about">
-                        <div class="giga-text">About</div>
-                        
-                        <div class="contact-info">
-                            <h3 class="h4 about-me-title">About Me.</h3>
-                            <p class="about-me-text">
-                                My name is Ameya Vaichalkar, and I am from Pune, India. Currently, I am pursuing a master's degree in 
-                                Computer Science at North Carolina State University, specializing in <strong>Software Engineering</strong>. 
-                                Prior to joining NC State, I worked as a <strong>Junior Software Engineer</strong> at EPAM Systems in India, 
-                                primarily focusing on Java Backend development. 
-                                I have a passion for building web applications using different web technologies. 
-                                I take pride in writing clean code and applying design principles and patterns to develop robust 
-                                and scalable applications. 
-                                My areas of interest include DevOps, Cloud Computing, and Web Development.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </main>
+            <span itemprop="name" class="visual-hide">Home</span>
+            <span aria-label="Ameya Vaichalkar's Logo"
+              >Ameya Vaichalkar's Logo</span
+            >
+          </a>
+          <div aria-label="Mobile Menu" class="nav-toggle">
+            <span class="menu-trigger">
+              <i class="menu-trigger-bar top"></i>
+              <i class="menu-trigger-bar middle"></i>
+              <i class="menu-trigger-bar bottom"></i>
+            </span>
+          </div>
+          <ul class="nav-links">
+            <li itemprop="name">
+              <a
+                href="#case-studies"
+                data-scroll
+                itemprop="url"
+                class="no-smoothState no-single-work"
+                >Work Experience</a
+              >
+            </li>
+            <li itemprop="name">
+              <a
+                href="#projects"
+                data-scroll
+                itemprop="url"
+                class="no-smoothState no-single-work"
+                >Projects</a
+              >
+            </li>
+            <li itemprop="name">
+              <a
+                href="#experiments"
+                data-scroll
+                itemprop="url"
+                class="no-smoothState no-single-work"
+                >Open Source</a
+              >
+            </li>
+            <li class="in-single-work">
+              <a href="/" data-destination="home" rel="nofollow">
+                <span aria-label="Back" class="nav-link-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="476.2"
+                    height="476.2"
+                    viewbox="174 -174.2 476.2 476.2"
+                  >
+                    <path
+                      d="M244.6 134.5l21.2-21.2-34.4-34.4h418.8v-30H231.4l34.4-34.4-21.2-21.2L174 63.9"
+                    ></path>
+                  </svg>
+                </span>
+                Turn Back Home
+              </a>
+            </li>
+            <li class="in-single-work">
+              <a href="" id="all-works" rel="nofollow" class="no-smoothState"
+                >All Works</a
+              >
+            </li>
+            <li>
+              <a href="" class="no-smoothState open-contact">Contact</a>
+            </li>
+            <li class="no-single-work">
+              <a
+                href="#"
+                id="change-theme"
+                class="no-smoothState no-single-work"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewbox="0 0 285.919 285.919"
+                >
+                  <path
+                    d="M142.959 0C64.131 0 0 64.132 0 142.96s64.131 142.959 142.959 142.959 142.96-64.131 142.96-142.959S221.787 0 142.959 0zm0 260.919V25c65.043 0 117.96 52.917 117.96 117.96 0 65.043-52.917 117.959-117.96 117.959z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-        <footer itemscope itemtype="http://schema.org/WPFooter" class="footer">
-            <div class="content">
-                <a href="#top" data-scroll class="footer-logo no-smoothstate">
-                    <!-- <img src="" alt="Ameya Vaichalkar's Personal Logo"> -->
-                    <svg xmlns="http://www.w3.org/2000/svg" id="my-svg" width="300" height="300" viewBox="0 0 300 300">
-                        <path d="M 75 225 L 150 75 L 225 225 M 112.5 187.5 L 187.5 187.5" fill="none" stroke="#FFF" stroke-width="12"/>
-                      </svg>
-                    <div class="footer-logo-top-label">
-                        Top
-                        <div class="footer-logo-top-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 31.479 31.479">
-                                <path d="M26.477 10.274a1.112 1.112 0 0 1 0 1.587 1.12 1.12 0 0 1-1.571 0l-8.047-8.047v26.555c0 .619-.492 1.111-1.111 1.111a1.118 1.118 0 0 1-1.127-1.111V3.813L6.59 11.86c-.444.429-1.159.429-1.587 0a1.112 1.112 0 0 1 0-1.587L14.955.321a1.12 1.12 0 0 1 1.571 0l9.951 9.953z" fill="#1e201d"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-                <div class="inner-container text-center">
-                    <ul class="footer-links">
-                        
-                        <li>
-                            <a href="https://www.linkedin.com/in/ameya-vaichalkar/" target="_blank" rel="noopener">Linkedin</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/ameyagv" target="_blank" rel="noopener">Github</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-                
+      </nav>
+      <nav class="mobile-menu">
+        <span aria-label="Close" class="close-trigger">
+          <i class="close-trigger-bar left"></i>
+          <i class="close-trigger-bar right"></i>
+        </span>
+        <ul class="mobile-nav-links">
+          <li>
+            <a href="/" data-destination="home">Home</a>
+          </li>
+
+          <li>
+            <a
+              href="#case-studies"
+              data-scroll
+              class="no-smoothState no-single-work"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              data-scroll
+              class="no-smoothState no-single-work"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#experiments"
+              data-scroll
+              class="no-smoothState no-single-work"
+              >Open Source</a
+            >
+          </li>
+          <li>
+            <a href="" class="no-smoothState open-contact">Contact</a>
+          </li>
+        </ul>
+        <ul class="nav-social-stripe">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/ameya-vaichalkar/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Linkedin"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="430.117"
+                height="430.117"
+                viewbox="0 0 430.117 430.117"
+              >
+                <path
+                  d="M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ameyagv"
+              target="_blank"
+              rel="noopener"
+              aria-label="Github"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="438.549"
+                height="438.549"
+                viewbox="0 0 438.549 438.549"
+              >
+                <path
+                  d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <header id="top" class="main-hero">
+        <div id="awwwards" class="sotd green right">
+          <a
+            href="http://www.awwwards.com/sites/riccardo-zanutta-interactive-frontend-developer"
+            target="_blank"
+            >Awwwards</a
+          >
+        </div>
+        <div class="main-hero-text">
+          <div class="content">
+            <div class="text-loading-mask">
+              <div class="text-loading-overlay"></div>
+              <h1 itemprop="author" class="main-hero-title">
+                Ameya Vaichalkar
+              </h1>
             </div>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script>
-            window.jQuery || document.write('<script src="js/jquery.min.js"><\\/script>');
-        </script>
-        <script>
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }
-                ,
-                i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            }
-            )(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-            ga('create', 'UA-62939051-2', 'auto');
-            ga('send', 'pageview');
-        </script>
-        <script src="js/application.js"></script>
-    </body>
+            <div>
+              <div class="text-loading-mask">
+                <div
+                  style="transition-delay: 0.1s"
+                  class="text-loading-overlay"
+                ></div>
+                <h3 itemprop="specialty" class="main-hero-subtitle h5">
+                  Software Engineer
+                </h3>
+              </div>
+            </div>
+            <div>
+              <div style="width: 175px" class="text-loading-mask">
+                <div
+                  style="transition-delay: 0.15s"
+                  class="text-loading-overlay"
+                ></div>
+                <a
+                  href="#"
+                  class="the-button call-to-button no-smoothstate open-contact"
+                >
+                  <span class="button-text">About Me</span>
+                  <div class="button-mask"></div>
+                  <span class="button-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewbox="0 0 476.213 476.213"
+                    >
+                      <path
+                        d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                      ></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="shapes-mask">
+          <!-- triangle-->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="37.196"
+            height="32.213"
+            viewbox="0 0 37.196 32.213"
+          >
+            <symbol id="triangle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25.675"
+                height="22.236"
+                viewbox="0 0 25.675 22.236"
+              >
+                <path
+                  fill="none"
+                  stroke="#CF4981"
+                  stroke-width="3"
+                  stroke-miterlimit="10"
+                  d="M12.837 3l5.12 8.868 5.12 8.868H2.597l5.12-8.868z"
+                ></path>
+              </svg>
+            </symbol>
+          </svg>
+          <!-- semi circle-->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="29.093"
+            height="14.546"
+            viewbox="0 0 29.093 14.546"
+          >
+            <symbol id="semiCircle">
+              <path
+                fill="none"
+                stroke="#CF4981"
+                stroke-width="3"
+                stroke-miterlimit="10"
+                d="M1.5 14.546C1.5 7.34 7.34 1.5 14.547 1.5c7.205 0 13.046 5.84 13.046 13.046"
+              ></path>
+            </symbol>
+          </svg>
+          <!-- spring-->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17.046"
+            height="36.016"
+            viewbox="0 0 17.046 36.016"
+          >
+            <symbol id="spring">
+              <path
+                fill="none"
+                stroke="#CF4981"
+                stroke-width="3"
+                stroke-miterlimit="10"
+                d="M9.945 34.614S1.46 31.38 1.5 23.92s11.73-4.797 11.73-4.797S3.82 16.708 4.18 8.77s12.784-7.255 12.784-7.255"
+              ></path>
+            </symbol>
+          </svg>
+          <!-- line-->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25.675"
+            height="22.236"
+            viewbox="0 0 25.675 22.236"
+          >
+            <symbol id="line">
+              <path
+                fill="none"
+                stroke="#CF4981"
+                stroke-width="3"
+                stroke-miterlimit="10"
+                d="M4.92 2.514L21.964 19.56"
+              ></path>
+            </symbol>
+          </svg>
+          <svg width="25px" height="25px" class="layer1 p1">
+            <use xlink:href="#triangle" class="yellow"></use>
+          </svg>
+          <svg width="28px" height="28px" class="layer1 p2">
+            <use xlink:href="#semiCircle" class="yellow"></use>
+          </svg>
+          <svg width="25px" height="25px" class="layer2 p3">
+            <use
+              width="25px"
+              height="25px"
+              xlink:href="#triangle"
+              class="aqua"
+            ></use>
+          </svg>
+          <svg class="layer1 p4">
+            <use xlink:href="#triangle" class="pink"></use>
+          </svg>
+          <svg width="28px" height="28px" class="layer1 p5">
+            <use xlink:href="#semiCircle" class="aqua"></use>
+          </svg>
+          <svg width="36px" height="36px" class="layer2 p6">
+            <use xlink:href="#spring" class="pink"></use>
+          </svg>
+          <svg width="36px" height="36px" class="layer2 p7">
+            <use xlink:href="#spring" class="pink"></use>
+          </svg>
+          <svg width="22px" height="22px" class="layer2 p8">
+            <use xlink:href="#line" class="aqua"></use>
+          </svg>
+          <svg width="22px" height="22px" class="layer1 p9">
+            <use xlink:href="#line" class="aqua"></use>
+          </svg>
+          <svg width="22px" height="22px" class="layer2 p10">
+            <use xlink:href="#line" class="yellow"></use>
+          </svg>
+          <svg width="28px" height="28px" class="layer1 p11">
+            <use xlink:href="#semiCircle" class="aqua"></use>
+          </svg>
+        </div>
+        <div itemscope="primaryImageOfPage" class="logo-mask"></div>
+        <ul
+          itemscope
+          itemtype="http://schema.org/Organization"
+          class="social-vertical-stripe"
+        >
+          <span itemprop="name" class="visual-hide">Ameya Vaichalkar</span>
+          <link itemprop="url" href="http://riccardozanutta.com/" />
+          <link
+            itemprop="logo"
+            href="http://riccardozanutta.com/icons/logo.svg"
+          />
+          <li>
+            <a
+              href="https://www.linkedin.com/in/ameya-vaichalkar/"
+              target="_blank"
+              rel="noopener"
+              itemprop="sameAs"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="430.117"
+                height="430.117"
+                viewbox="0 0 430.117 430.117"
+              >
+                <path
+                  d="M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ameyagv"
+              target="_blank"
+              rel="noopener"
+              itemprop="sameAs"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="438.549"
+                height="438.549"
+                viewbox="0 0 438.549 438.549"
+              >
+                <path
+                  d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a href="#case-studies" data-scroll class="hero-go-next no-smoothstate">
+          <div class="go-next-label">Work Experience</div>
+          <span class="the-arrow arrow-down"></span>
+        </a>
+      </header>
+      <main>
+        <div class="some-shapes">
+          <div data-rellax-speed="-1" class="circle1 rellax">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="70"
+              height="70"
+              viewbox="0 0 70 70"
+            >
+              <circle
+                fill="none"
+                stroke="#6107EF"
+                stroke-width="9"
+                stroke-miterlimit="10"
+                cx="35"
+                cy="35.1"
+                r="28.5"
+              ></circle>
+            </svg>
+          </div>
+          <div data-rellax-speed="1" class="square1 rellax">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100"
+              height="100"
+              viewbox="0 0 100 100"
+            >
+              <path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path>
+            </svg>
+          </div>
+          <div data-rellax-speed="1" class="triangle1 rellax">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="70"
+              height="70"
+              viewbox="0 0 70 70"
+            >
+              <path
+                fill="none"
+                stroke="#0FE851"
+                stroke-width="8"
+                stroke-miterlimit="10"
+                d="M12.6 56l22.8-39.5L58.2 56z"
+              ></path>
+            </svg>
+          </div>
+          <div data-rellax-speed="-1" class="cross1 rellax">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="180"
+              height="180"
+              viewbox="26 -26 180 180"
+            >
+              <path
+                fill="#ffda77"
+                d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"
+              ></path>
+              <path
+                fill="#ffda77"
+                d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"
+              ></path>
+            </svg>
+          </div>
+          <div data-rellax-speed="-1.3" class="circle2 rellax">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="70"
+              height="70"
+              viewbox="0 0 70 70"
+            >
+              <circle
+                fill="none"
+                stroke="#6107EF"
+                stroke-width="9"
+                stroke-miterlimit="10"
+                cx="35"
+                cy="35.1"
+                r="28.5"
+              ></circle>
+            </svg>
+          </div>
+          <div data-rellax-speed="-1" class="square2 rellax">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100"
+              height="100"
+              viewbox="0 0 100 100"
+            >
+              <path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path>
+            </svg>
+          </div>
+          <div data-rellax-speed="1" class="triangle2 rellax">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="70"
+              height="70"
+              viewbox="0 0 70 70"
+            >
+              <path
+                fill="none"
+                stroke="#0FE851"
+                stroke-width="8"
+                stroke-miterlimit="10"
+                d="M12.6 56l22.8-39.5L58.2 56z"
+              ></path>
+            </svg>
+          </div>
+          <div data-rellax-speed="1" class="cross2 rellax">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="180"
+              height="180"
+              viewbox="26 -26 180 180"
+            >
+              <path
+                fill="#ffda77"
+                d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"
+              ></path>
+              <path
+                fill="#ffda77"
+                d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"
+              ></path>
+            </svg>
+          </div>
+          <div data-rellax-speed="-1" class="square3 rellax">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100"
+              height="100"
+              viewbox="0 0 100 100"
+            >
+              <path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path>
+            </svg>
+          </div>
+          <div data-rellax-speed="1.3" class="circle3 rellax">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="70"
+              height="70"
+              viewbox="0 0 70 70"
+            >
+              <circle
+                fill="none"
+                stroke="#6107EF"
+                stroke-width="9"
+                stroke-miterlimit="10"
+                cx="35"
+                cy="35.1"
+                r="28.5"
+              ></circle>
+            </svg>
+          </div>
+          <div data-rellax-speed="-1" class="cross3 rellax">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="180"
+              height="180"
+              viewbox="26 -26 180 180"
+            >
+              <path
+                fill="#ffda77"
+                d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"
+              ></path>
+              <path
+                fill="#ffda77"
+                d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <section
+          id="case-studies"
+          itemscope=""
+          itemprop="mainContentOfPage"
+          class="case-studies-section"
+        >
+          <div class="section-mask"></div>
+          <div class="content">
+            <div class="section-text-mask">
+              <!-- <h4 class="h5 section-subtitle">Case Studies</h4> -->
+            </div>
+            <div class="section-text-mask">
+              <h2 class="h3 section-title">Professional Background</h2>
+            </div>
+            <ul class="case-studies-list">
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/epam.html"
+                  id="cerasa"
+                  style="background-image: url('img/cerasa-work.jpg')"
+                  data-destination="cerasa"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">01</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="01" class="case-study-mask-overlay">
+                        01
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      Tata Consultancy Services
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      Software Engineer
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/epam.html"
+                  id="cerasa"
+                  style="background-image: url('img/cerasa-work.jpg')"
+                  data-destination="cerasa"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">02</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="01" class="case-study-mask-overlay">
+                        02
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      EPAM Systems
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      Software Engineer
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/vois.html"
+                  id="lato"
+                  style="background-image: url('img/lato-admin.png')"
+                  data-destination="lato"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">03</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="03" class="case-study-mask-overlay">
+                        02
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      Vodafone Intelligent Solutions
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      Graduate Engneer Trainee
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section
+          id="projects"
+          itemscope=""
+          itemprop="mainContentOfPage"
+          class="case-studies-section"
+        >
+          <div class="section-mask"></div>
+          <div class="content">
+            <div class="section-text-mask">
+              <h4 class="h5 section-subtitle">Projects</h4>
+            </div>
+            <div class="section-text-mask">
+              <h2 class="h3 section-title">Latest Projects</h2>
+            </div>
+            <ul class="case-studies-list">
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/terrain.html"
+                  id="cerasa"
+                  style="background-image: url('img/cerasa-work.jpg')"
+                  data-destination="cerasa"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">01</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="01" class="case-study-mask-overlay">
+                        01
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      Terrain Identification
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      Time Series Data, Machine Learning, LSTM, BiLSTM
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/foodfight.html"
+                  id="lato"
+                  style="background-image: url('img/lato-admin.png')"
+                  data-destination="lato"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">02</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="02" class="case-study-mask-overlay">
+                        02
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      The Great Food Fight: CNN Vs TRANSFORMERS
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      Machine Learning, Computer Vision, CNN, Transformers
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/dbms.html"
+                  id="la-francesca"
+                  style="background-image: url('img/la-francesca-work.jpg')"
+                  data-destination="la-francesca"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">03</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="03" class="case-study-mask-overlay">
+                        03
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      WolfMedia
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      Database Management System for a Digital music and podcast
+                      streaming service. Built using Java, SpringBoot, JDBC,
+                      MariaDB, MySQL, REST
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/bookshopping.html"
+                  id="sportland"
+                  style="background-image: url('img/sportland-work.jpg')"
+                  data-destination="sportland"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">04</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="04" class="case-study-mask-overlay">
+                        04
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      Book Shopping Application
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      Comprehensive platform that enables users to browse,
+                      purchase, and review books, add to cart, all while
+                      ensuring data integrity, handling concurrency in shopping
+                      and user privacy. <br />Built using Ruby on Rails, HTML5,
+                      Docker.
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/sportland"
+                  id="sportland"
+                  style="background-image: url('img/sportland-work.jpg')"
+                  data-destination="sportland"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">05</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="05" class="case-study-mask-overlay">
+                        05
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      Image Style Transfer
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      Evaluated three powerful models (CycleGANs, ResNet50, and
+                      VGG-19) for Image Style Transfer on the vangogh2photo
+                      dataset, enabling the transformation of content images
+                      into stunning stylized artworks. Used Tensorflow, Keras,
+                      Pix2Pix.
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/sportland"
+                  id="sportland"
+                  style="background-image: url('img/sportland-work.jpg')"
+                  data-destination="sportland"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">06</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="06" class="case-study-mask-overlay">
+                        06
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      WolfLease
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      An application to help people find Apartments offering
+                      rooms on sublease and move in faster! Built using Python,
+                      Django, HTML5, CSS and JavaScript
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/sportland"
+                  id="sportland"
+                  style="background-image: url('img/sportland-work.jpg')"
+                  data-destination="sportland"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">07</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="07" class="case-study-mask-overlay">
+                        07
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      Library Management System
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      Microservice architecture to simulate library functions
+                      with better scalability. Used Java, Spring MVC, Spring
+                      REST, Spring Boot, Spring Data JPA, Feign client, Eureka
+                      Naming Service.
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/sportland"
+                  id="sportland"
+                  style="background-image: url('img/sportland-work.jpg')"
+                  data-destination="sportland"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">08</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="08" class="case-study-mask-overlay">
+                        08
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      Password Management tool
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      A secure Password Management Tool (PMT) wherein users can
+                      store username, password credentials, group them based on
+                      a criteria. Used Java, REST service and MVC client, Spring
+                      Boot, RestTemplate, JSP
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+              <li itemscope itemtype="http://schema.org/CreativeWork">
+                <a
+                  href="/sportland"
+                  id="sportland"
+                  style="background-image: url('img/sportland-work.jpg')"
+                  data-destination="sportland"
+                  itemprop="url"
+                  class="case-study"
+                >
+                  <div class="case-study-mask"></div>
+                  <div class="case-study-reveal-mask"></div>
+                  <div class="case-study-mask-number">
+                    <div class="case-study-mask-back">09</div>
+                    <div class="case-study-mask-front">
+                      <div data-index="09" class="case-study-mask-overlay">
+                        09
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-study-text-section">
+                    <h3 itemprop="name" class="h2 case-study-title">
+                      Camera LiDAR Object Detection
+                    </h3>
+                    <h5 itemprop="description" class="case-study-subtitle">
+                      Data fusion technique, combining Camera and LiDAR data
+                      through multivariate polynomial regression, resulting in
+                      efficient detection, classification, and distance
+                      estimation of vehicles, with the added optimization of
+                      converting LiDAR's 3D point data to 2D images for faster
+                      object detection. Used Python, Computer Vision, Machine
+                      Learning, OpenCV, YOLO
+                    </h5>
+                    <button class="the-button call-to-button">
+                      <span class="button-text">Read More</span>
+                      <div class="button-mask"></div>
+                      <span class="button-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewbox="0 0 476.213 476.213"
+                        >
+                          <path
+                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section mobile-only">
+          <div class="section-mask"></div>
+          <div class="content">
+            <div class="button-content text-center">
+              <button class="the-button button-big open-contact">
+                Contact me
+              </button>
+            </div>
+          </div>
+        </section>
+        <section id="experiments" class="experiments-section">
+          <div class="section-mask"></div>
+          <div class="inner-container">
+            <div class="section-text-mask">
+              <h3 class="h5 section-subtitle">Open Source</h3>
+            </div>
+            <div class="section-text-mask">
+              <!-- <h2 class="h3 section-title">Web is fun.</h2> -->
+            </div>
+          </div>
+          <div class="inner-container hidden">
+            <div class="experiments-mask-reveal">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="inner-container">
+              <a
+                href="https://github.com/expertiza/expertiza/pull/2548"
+                target="_blank"
+                rel="noopener"
+                class="experiment"
+              >
+                <div class="experiment-mask"></div>
+                <div class="experiment-number-mask">
+                  <span>01</span>
+                </div>
+                <div class="experiment-circle">
+                  <div class="experiment-image"></div>
+                </div>
+                <div class="experiment-title-area">
+                  <div class="experiment-title-label">Refactoring</div>
+                  <div class="experiment-title">
+                    Refactoring Course and CourseTeam models
+                  </div>
+                </div>
+                <div class="experiment-number-area">&nbsp;</div>
+              </a>
+              <a
+                href="https://github.com/ameyagv/reimplementation-back-end/tree/course-dev"
+                target="_blank"
+                rel="noopener"
+                class="experiment"
+              >
+                <div class="experiment-mask"></div>
+                <div class="experiment-number-mask">
+                  <span>02</span>
+                </div>
+                <div class="experiment-circle">
+                  <div class="experiment-image"></div>
+                </div>
+                <div class="experiment-title-area">
+                  <div class="experiment-title-label">Reimplementation</div>
+                  <div class="experiment-title">
+                    Reimplementing Courses Functionality
+                  </div>
+                </div>
+                <div class="experiment-number-area">&nbsp;</div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <div class="about-contact">
+          <div id="contact-half" class="half-contact is-contact">
+            <div class="form-loader">
+              <div class="form-loader-content">
+                <div class="stripe-loader">
+                  <div class="stripe"></div>
+                  <div class="stripe"></div>
+                  <div class="stripe"></div>
+                </div>
+              </div>
+              <div class="form-message-content">
+                <div class="form-message">Default Message</div>
+              </div>
+            </div>
+            <div class="form-loader-before"></div>
+            <div class="giga-text">Contact</div>
+            <div class="contact-info">
+              <h3 class="h4 form-title">Let’s talk.</h3>
+              <!-- <p class="form-subtitle">New projects, freelance inquiry or even a coffee.</p> -->
+              <div class="inner-container">
+                <form
+                  id="contact-form"
+                  method="post"
+                  action="mailer.php"
+                  class="the-form no-smoothState"
+                >
+                  <div class="input required">
+                    <input type="text" id="name" name="name" />
+                    <label class="label">Name</label>
+                  </div>
+                  <div class="input required email">
+                    <input type="text" id="email" name="email" />
+                    <label class="label">E-mail</label>
+                  </div>
+                  <div class="input required">
+                    <textarea id="message" name="message"></textarea>
+                    <label class="label">Message</label>
+                  </div>
+                  <div class="inner-container">
+                    <button
+                      type="submit"
+                      disabled
+                      class="the-button submit-button"
+                    >
+                      <span class="button-text">Send Message</span>
+                      <div class="button-mask"></div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="close-contact">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <div class="half-contact is-about">
+            <div class="giga-text">About</div>
+
+            <div class="contact-info">
+              <h3 class="h4 about-me-title">About Me.</h3>
+              <p class="about-me-text">
+                My name is Ameya Vaichalkar, and I am from Pune, India.
+                Currently, I am pursuing a master's degree in Computer Science
+                at North Carolina State University, specializing in
+                <strong>Software Engineering</strong>. Prior to joining NC
+                State, I worked as a
+                <strong>Junior Software Engineer</strong> at EPAM Systems in
+                India, primarily focusing on Java Backend development. I have a
+                passion for building web applications using different web
+                technologies. I take pride in writing clean code and applying
+                design principles and patterns to develop robust and scalable
+                applications. My areas of interest include DevOps, Cloud
+                Computing, and Web Development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer itemscope itemtype="http://schema.org/WPFooter" class="footer">
+      <div class="content">
+        <a href="#top" data-scroll class="footer-logo no-smoothstate">
+          <!-- <img src="" alt="Ameya Vaichalkar's Personal Logo"> -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="my-svg"
+            width="300"
+            height="300"
+            viewBox="0 0 300 300"
+          >
+            <path
+              d="M 75 225 L 150 75 L 225 225 M 112.5 187.5 L 187.5 187.5"
+              fill="none"
+              stroke="#FFF"
+              stroke-width="12"
+            />
+          </svg>
+          <div class="footer-logo-top-label">
+            Top
+            <div class="footer-logo-top-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewbox="0 0 31.479 31.479"
+              >
+                <path
+                  d="M26.477 10.274a1.112 1.112 0 0 1 0 1.587 1.12 1.12 0 0 1-1.571 0l-8.047-8.047v26.555c0 .619-.492 1.111-1.111 1.111a1.118 1.118 0 0 1-1.127-1.111V3.813L6.59 11.86c-.444.429-1.159.429-1.587 0a1.112 1.112 0 0 1 0-1.587L14.955.321a1.12 1.12 0 0 1 1.571 0l9.951 9.953z"
+                  fill="#1e201d"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <div class="inner-container text-center">
+          <ul class="footer-links">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/ameya-vaichalkar/"
+                target="_blank"
+                rel="noopener"
+                >Linkedin</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/ameyagv"
+                target="_blank"
+                rel="noopener"
+                >Github</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="js/jquery.min.js"><\\/script>');
+    </script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-62939051-2", "auto");
+      ga("send", "pageview");
+    </script>
+    <script src="js/application.js"></script>
+  </body>
 </html>

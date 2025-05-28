@@ -440,11 +440,11 @@
                 </li>
                 <li>
                   <strong>Context</strong>
-                  <span class="stripe-baffle">Data Science</span>
+                  <span class="stripe-baffle">Data Science, Computer Vision</span>
                 </li>
                 <li>
                   <strong>Period</strong>
-                  <span class="stripe-baffle">Feb 2023 - April 2023</span>
+                  <span class="stripe-baffle">October 2023 - November 2023</span>
                 </li>
               </ul>
             </div>
@@ -461,8 +461,7 @@
               </h2>
               <div class="single-work-intro-text single-work-anim-text">
                 <p itemprop="description">
-                    Exploring the effectiveness of Vision Transformers and 
-                    Convolutional Neural Networks (CNNs) in image classification tasks on the Food101 dataset.
+                    
                 </p>
               </div>
               <div class="button-content single-work-anim-text">
@@ -495,33 +494,34 @@
                 <div
                   class="single-work-text-content is-left single-work-first-anim-blocks"
                 >
-                  
+                <h3 class="single-work-content-title">
+                  Artistic Fusion with Resnet50, CycleGANs, and VGG19
+                </h3>
                   
                   <div class="single-work-content-desc">
                     <p>
-                        <strong>Dataset</strong>: Due to computational power constraints, we partitioned the Food-101 dataset, containing approximately 101,000 images, into 10 classes.
-                        <br>
-                        Train Split : 7500​
-                        <br>
-                        Test Split : 2500
-                    </p>
-                    <p>
-                        We used Transfer Learning, <strong>DenseNet121</strong> was used as the baseline model for image classification. 
-                        To adapt the model to the <strong>Food101</strong> with 10 classes, we fine tuned the last layer of the model. 
-                        This allowed us to focus on a specific subset of the dataset and improve the performance of the model 
-                        for this particular task.
-                    </p>
-                    <p>
-                        We used the <strong>ViT16</strong> as the second baseline model. To fine-tune it for Food101 dataset, we removed the classification head, 
-                        added a new head, freezed the pre-trained layers, and trained it on the dataset, and evaluated the performance with DenseNet.
-                    </p>
-                    <p>
-                        Our analysis of the performance of Vision Transformers (ViT16) and 
-                        Convolutional Neural Networks (DenseNet121) on the Food101 dataset has shown that 
-                        ViT16 outperforms DenseNet121.
-                        The classification report results indicate that ViT16 achieved higher precision, 
-                        recall, F1-score, and accuracy compared to DenseNet121. Specifically, the macro 
-                        and weighted-average F1-scores were 11.6% higher for ViT16
+                      In this project, we embarked on a captivating journey of image style transfer using the power of 
+                      <string>Resnet50, CycleGANs, and VGG19</string>. With CycleGANs, we harnessed the <strong>vangogh2photo</strong> dataset, 
+                      allowing unpaired images to undergo a magical transformation. Employing augmentation techniques 
+                      like <strong>jittering and mirroring</strong>, we nurtured the model to avoid overfitting while maintaining 
+                      reasonable computational efficiency. By resizing the images to 256x256, we balanced processing 
+                      time and visual impact.
+
+                      <p>Inspired by the resilience of the CycleGANs architecture, we leveraged the Pix2Pix module from 
+                      TensorFlow, utilizing a U-Net-based generator design. With two generators and discriminators, 
+                      we controlled the blend of style and content. Instance normalization further enhanced the results, 
+                      enabling the seamless transition between natural photographs and Van Gogh's artistic marvels. 
+                      Our focused training spanned 10 epochs, empowered by the Adam optimizer.</p>
+
+                      However, our creative exploration did not stop there. We integrated the wisdom of VGG19 and Resnet, 
+                      leveraging their pre-trained CNN models to construct a custom model for the ultimate image style transfer. 
+                      This additional technique allowed us to compare the content and style of two images, 
+                      unveiling new dimensions of artistic expression. Our transfer network, designed with an encoder-decoder architecture, 
+                      emerged as a masterful translator, bringing forth captivating visuals with each transformation.
+
+                      Through the harmonious interplay of Resnet50, CycleGANs, and VGG19, 
+                      this project celebrated the fusion of art and technology, 
+                      unlocking the hidden potential for image style transfer and unleashing a world of boundless creativity.
                     </p>
                   </div>
                 </div>
